@@ -87,3 +87,7 @@ int main() {
 
     return 0;
 }
+
+A->Aa|b
+A->ab|ac
+    
