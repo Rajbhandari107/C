@@ -15,3 +15,10 @@ Transitions (GOTO):
 GOTO: E->E.+T
 GOTO: E->T.
 GOTO: T->i.d
+
+exp11
+
+a+b*c
+
+t1 = b * c
+t2 = a + t
