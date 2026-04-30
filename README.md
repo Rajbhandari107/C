@@ -39,3 +39,17 @@ Indirect Triple
 Pointer Table:
 Pointer[0] -> 0
 Pointer[1] -> 1
+
+
+exp12
+
+Sample Input
+a=b+c*d
+Sample Output
+--- Generated Code ---
+MOV R0, c
+MUL R0, d
+MOV a, R0
+MOV R0, b
+ADD R0, c
+MOV a, R0
