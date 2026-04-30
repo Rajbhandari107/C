@@ -1,0 +1,37 @@
+Procedure (Intermediate Code Generation: Quadruple, Triple, Indirect Triple)
+Read the input expression (e.g., a=b+c*d)
+Scan the expression and identify operands and operators
+Apply operator precedence (*, / before +, -)
+Select a sub-expression (handle) to evaluate
+Extract:
+arg1 (left operand)
+arg2 (right operand)
+op (operator)
+Generate intermediate representation for that operation
+Replace the sub-expression with result (temp variable or index)
+Repeat until the whole expression reduces to a single result
+Algorithm
+Step 1: Input
+Start
+Read expression exp
+Step 2: Quadruple Generation
+Initialize temp counter (t1, t2, ...)
+For each operator (based on precedence):
+arg1 = left operand
+arg2 = right operand
+result = new temporary
+Store (op, arg1, arg2, result)
+Replace sub-expression with result
+Step 3: Triple Generation
+Initialize index = 0
+For each operation:
+Store (index, op, arg1, arg2)
+Replace sub-expression with (index)
+Increment index
+Step 4: Indirect Triple
+Create pointer table
+Store references to triple indices in pointer table
+Use pointer table to access instructions
+Step 5: Output
+Display Quadruple, Triple, and Indirect Triple tables
+Stop
