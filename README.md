@@ -22,3 +22,20 @@ a+b*c
 
 t1 = b * c
 t2 = a + t
+
+
+Sample Input
+a=b+c*d
+Sample Output (cleaned)
+Quadruple
+Op   Arg1 Arg2 Result
+*    c    d    t1
++    b    t1   t2
+Triple
+Index Op  Arg1 Arg2
+0     *   c    d
+1     +   b    (0)
+Indirect Triple
+Pointer Table:
+Pointer[0] -> 0
+Pointer[1] -> 1
